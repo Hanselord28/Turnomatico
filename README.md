@@ -64,7 +64,7 @@ Bridge	Separa notificaciones (audio/pantalla) de la lógica principal
 
 🖥️ Diagrama de Implementación
 
-![image](/Diagrama-de-implementacion.drawio.png)
+![image](Diagramas/Diagrama-de-implementacion.png)
 
 
 🗃️ Estructura de Datos
