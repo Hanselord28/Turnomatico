@@ -48,7 +48,7 @@ Notificar Estado	Alertas automáticas (pantalla/audio)
 
 🧩 Diagrama de Clases (Estructura Principal)
 
-![image](/Diagrama-de-clases-Turnomatico.drawio.png)
+![image](/Diagramas/Diagrama-de-clases-Turnomatico.png)
 
 🔑 Patrones de Diseño Implementados
 -
