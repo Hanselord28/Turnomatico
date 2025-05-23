@@ -3,11 +3,11 @@
 El Sistema Turnomático es una solución tecnológica que asigna turnos de forma automatizada mediante la emisión de tickets numerados, ya sea a través de:
 
 Pantallas táctiles
--
+
 Aplicaciones web
--
+
 Dispensadores físicos
--
+
 Beneficios clave:
 -
 ✔ Organiza la atención por orden de llegada o prioridades predefinidas
@@ -16,6 +16,7 @@ Beneficios clave:
 ✔ Optimiza la gestión de recursos humanos
 
 📊 Diagrama de Casos de Uso
+-
 
 ![image](/Turnomatico.drawio.png)
 
@@ -47,9 +48,10 @@ Notificar Estado	Alertas automáticas (pantalla/audio)
 
 🧩 Diagrama de Clases (Estructura Principal)
 
-![image](/Diagramas/Diagrama-de-clases-Turnomatico.drawio.png)
+![image](/Diagrama-de-clases-Turnomatico.drawio.png)
 
 🔑 Patrones de Diseño Implementados
+-
 Patrón	Aplicación
 
 Singleton	ControladorDeTurnos (una única instancia global)             
@@ -62,10 +64,11 @@ Bridge	Separa notificaciones (audio/pantalla) de la lógica principal
 
 🖥️ Diagrama de Implementación
 
-![image](/Diagramas/Diagrama-de-implementacion.drawio.png)
+![image](/Diagrama-de-implementacion.drawio.png)
 
 
 🗃️ Estructura de Datos
+-
 
 Entidad	Campos                                              
 
