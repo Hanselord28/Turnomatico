@@ -1,76 +1,44 @@
-Sistema turnomatico
-Descripcion 
-El sistema de turnomático permite asignar turnos de forma automatizada mediante la emisión de tickets numerados,
-ya sea a través de una pantalla táctil, aplicación web o dispensador físico.
-Organiza la atención por orden de llegada o según prioridades definidas, mejorando la eficiencia del servicio y reduciendo los tiempos de espera. 
-El sistema puede incluir pantallas informativas, alertas visuales y sonoras, y estadísticas de atención para mejorar la experiencia del usuario y optimizar los recursos humanos del establecimiento.
-1.- Diagrama de caso de uso
-(ss)
+📌 Descripción
+El Sistema Turnomático es una solución tecnológica que asigna turnos de forma automatizada mediante la emisión de tickets numerados, ya sea a través de:
 
-Análisis del diagrama de casos de uso:
+Pantallas táctiles
 
-Actores:
-Cliente: Usuario principal que interactúa con el sistema para gestionar sus turnos.
+Aplicaciones web
 
-Administrador: Encargado de definir y mantener la disponibilidad de turnos.
-Sistema de notificación: Sistema externo que envía alertas sobre el estado del turno al cliente.
+Dispensadores físicos
 
-Casos de uso principales:
-Tomar Turno: El cliente solicita un nuevo turno.
-Consultar Estado de Turnos: El cliente verifica si hay turnos disponibles.
-Includ: Administra disponibilidad de turnos.
-Ver Turno: El cliente revisa los detalles del turno que ha tomado.
-Extend: Cancelar Turno, en caso de que quiera anularlo.
-Includ: Notifica estado de turno, para actualizar al cliente.
-Administra disponibilidad de turnos: El administrador establece o modifica los turnos disponibles.
-Notifica estado de turno: El sistema informa al cliente sobre el estado actual de su turno (por ejemplo, llamado, cancelado, etc.).
+Beneficios clave:
+✔ Organiza la atención por orden de llegada o prioridades predefinidas
+✔ Reduce tiempos de espera y mejora la eficiencia del servicio
+✔ Incluye pantallas informativas, alertas visuales/sonoras y estadísticas de atención
+✔ Optimiza la gestión de recursos humanos
 
-Explicación del diagrama de clases:
-Clases principales:
-Usuario: Representa al cliente. Contiene identificador (id) y RUT.
-Turno (Prototype): Representa un turno individual con número, RUT del solicitante y estado.
-Tiene un método Clonar() que indica uso del patrón Prototype, útil para duplicar turnos.
-ControladorDeTurnos (Singleton):
-Clase central que gestiona los turnos (crear, cancelar, ver disponibilidad).
-Aplica el patrón Singleton para asegurar una única instancia que administre todos los turnos.
-
-Notificación de turnos:
-NotificadorDeTurnos (Observer + Bridge):
-Maneja las notificaciones del estado de los turnos y comunica los cambios.
-Usa el patrón Observer para actualizar métodos de notificación cuando hay cambios en el turno.
-
-NotificarPorAltavoz / NotificarPorPantalla:
-Clases concretas que implementan los métodos de notificación:
-
-LlamarPorAltavoz(): Anuncia turnos por audio.
-
-MostrarEnPantalla(): Muestra información visualmente.
-
-Explicación del diagrama de implementación:
-Componentes principales:
-Administrador del sistema:
-Tiene acceso completo para configurar y mantener el sistema, incluyendo la base de datos y el servidor.
-
-Base de Datos:
-Contiene dos entidades:
-
-Turnos: Almacena información de los turnos generados.
-
-Usuarios: Registra los datos de los usuarios que solicitan turnos.
-
-Servidor Local:
-Contiene los componentes lógicos del sistema:
-
-Controlador de Turnos: Se encarga de crear, cancelar y gestionar turnos.
-
-Notificador de turnos: Informa los cambios de estado de los turnos.
-
-Totem de atención:
-Punto de acceso del usuario para solicitar turnos. Se conecta al servidor local.
-
-Altavoz y Pantalla:
-Dispositivos de salida que ejecutan la notificación:
-
-NotificarPorAltavoz: Anuncia los turnos por audio.
-
-NotificarPorPantalla: Muestra visualmente el turno en pantalla.
+📊 Diagrama de Casos de Uso
+👥 Actores Principales
+Actor	Descripción
+Cliente	Usuario que solicita y gestiona turnos
+Administrador	Configura disponibilidad y parámetros del sistema
+Sistema de Notificación	Envía alertas sobre el estado de los turnos
+🔧 Casos de Uso
+![image](/Turnomatico.drawio.png)
+Función	Descripción
+Tomar Turno	Genera un nuevo ticket numerado
+Consultar Estado	Verifica disponibilidad y posición en cola
+Cancelar Turno	Elimina un turno asignado
+Administrar Turnos	(Admin) Configura horarios y prioridades
+Notificar Estado	Alertas automáticas (pantalla/audio)
+🧩 Diagrama de Clases (Estructura Principal)
+![image](/DiagramadeclasesTurnometro.drawio.png)
+🔑 Patrones de Diseño Implementados
+Patrón	Aplicación
+Singleton	ControladorDeTurnos (una única instancia global)
+Prototype	Turno (permite clonar turnos existentes)
+Observer	NotificadorDeTurnos (actualiza métodos de alerta)
+Bridge	Separa notificaciones (audio/pantalla) de la lógica principal
+🖥️ Diagrama de Implementación
+![image](/Diagramadeimplementacion.drawio.png)
+🏗️ Componentes Clave
+🗃️ Estructura de Datos
+Entidad	Campos
+Turnos	ID, Número, RUT, Estado, Hora
+Usuarios	RUT, Nombre, Historial de Turnos
