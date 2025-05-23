@@ -18,7 +18,7 @@ Beneficios clave:
 📊 Diagrama de Casos de Uso
 -
 
-![image](/Diagramas/Turnomatico.drawio.png)
+![image](/Diagramas/Turnomatico.png)
 
 👥 Actores Principales
 -
