@@ -43,7 +43,7 @@ Notificar Estado	Alertas automáticas (pantalla/audio)
 
 🧩 Diagrama de Clases (Estructura Principal)
 
-![image](/Diagrama_de_clases_Turnomatico.drawio.png)
+![image](/Diagrama-de-clases-Turnomatico.drawio.png)
 
 🔑 Patrones de Diseño Implementados
 Patrón	Aplicación
@@ -58,7 +58,7 @@ Bridge	Separa notificaciones (audio/pantalla) de la lógica principal
 
 🖥️ Diagrama de Implementación
 
-![image](/Diagrama_de_implementacion.drawio.png)
+![image](/Diagrama-de-implementacion.drawio.png)
 
 
 🗃️ Estructura de Datos
